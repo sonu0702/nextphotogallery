@@ -10,8 +10,7 @@ function Photos() {
     return <>
         {
             data && data.map((photo: any) => {
-                return
-                <div key={photo.id} style={{ width: 'fit-content', height: 'fit-content' }}>
+                return <div key={photo.id} style={{ width: 'fit-content', height: 'fit-content' }}>
                     <img
                         key={photo.id}
                         src={photo.thumbnailUrl}
