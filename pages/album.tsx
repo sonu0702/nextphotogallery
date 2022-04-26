@@ -9,7 +9,7 @@ function Albums() {
     return <>
         {
             data && data.map((album: any) => {
-                return <Link href={'/photos'}><span>{album.title}</span></Link>
+                return <Link key={album.id} href={'/photos'}><span>{album.title}</span></Link>
             })
         }
     </>
