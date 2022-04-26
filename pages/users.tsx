@@ -9,7 +9,11 @@ function Users() {
     return <>
         {
             data && data.map((user: any) => {
-                return <Link key={user.id} href={'/album'}><span>{user.name}</span></Link>
+                return <Link
+                    key={user.id}
+                    href={'/album'}>
+                    <span>{user.name}</span>
+                </Link>
             })
         }
     </>

@@ -19,8 +19,10 @@ const Home: NextPage = () => {
         </h1>
         <div className={styles.grid}>
           <Link href="/users">
-            <h2>Users &rarr;</h2>
-            <p>Find in-depth information about users.</p>
+            <div>
+              <h2>Users &rarr;</h2>
+              <p>Find in-depth information about users.</p>
+            </div>
           </Link>
         </div>
       </main>
