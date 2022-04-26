@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image'
 import useSWR from 'swr'
 
 function Photos() {
@@ -7,14 +5,16 @@ function Photos() {
         (apiURL: string) => fetch(apiURL).then(res => res.json()))
     if (error) <p>Loading failed...</p>;
     if (!data) <h1>Loading...</h1>;
-    return <>
+    return <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        border: '1px solid red'
+    }}>
         {
             data && data.map((photo: any) => {
                 return <div key={photo.id} style={{
                     width: 'fit-content',
                     height: 'fit-content',
-                    display: 'flex',
-                    flexWrap: 'wrap'
                 }}>
                     <img
                         key={photo.id}
@@ -23,6 +23,6 @@ function Photos() {
                 </div>
             })
         }
-    </>
+    </div>
 }
 export default Photos;
