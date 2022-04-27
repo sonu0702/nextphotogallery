@@ -15,12 +15,12 @@ function Users() {
         (apiURL: string) => fetch(apiURL).then(res => res.json()))
     if (error) <p>Loading failed...</p>;
     if (!data) <h1>Loading...</h1>;
-    return <div className={styles.container}>
-        {
-            data && data.map((user: any) => {
-                return <User user={user} />
-            })
+    return <div style={{display:'flex' , flexWrap:'wrap'}}>
+{
+    data && data.map((user: any) => {
+        return <User key={user.id} user={user} />
+    })
         }
-    </div>
+    </div >
 }
 export default Users;

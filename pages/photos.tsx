@@ -6,7 +6,7 @@ function Photos() {
         (apiURL: string) => fetch(apiURL).then(res => res.json()))
     if (error) <p>Loading failed...</p>;
     if (!data) <h1>Loading...</h1>;
-    return <div className={styles.container}>
+    return <div style={{display:'flex' , flexWrap:'wrap'}}>
         {
             data && data.map((photo: any) => {
                 return <div key={photo.id} style={{
