@@ -1,0 +1,14 @@
+.usercard  {
+    min-height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) ;
+    border-radius: 4px;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.container {
+    display: 'flex';
+    flex-wrap : 'wrp';
+}

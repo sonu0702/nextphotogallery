@@ -1,15 +1,12 @@
 import useSWR from 'swr'
+import styles from '../styles/User.module.css'
 
 function Photos() {
     const { data, error } = useSWR('https://jsonplaceholder.typicode.com/photos',
         (apiURL: string) => fetch(apiURL).then(res => res.json()))
     if (error) <p>Loading failed...</p>;
     if (!data) <h1>Loading...</h1>;
-    return <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        border: '1px solid red'
-    }}>
+    return <div className={styles.container}>
         {
             data && data.map((photo: any) => {
                 return <div key={photo.id} style={{
